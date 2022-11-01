@@ -1,1 +1,1 @@
-Das ist webpage fur Kris.
+Das ist ein WebSeite für Kris.
