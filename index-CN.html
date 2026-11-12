@@ -11,14 +11,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="渥太华大学 AI 博士。物理先验世界模型、自动驾驶、生成式 AI。" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/site.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 
 			<header id="header" class="alt">
-				<a href="index-CN.html" class="logo"><strong>ZHANG</strong> <span>VIVA Research</span></a>
+				<a href="index-CN.html" class="logo"><strong>ZHANG</strong> <span>AI Research</span></a>
 				<nav>
+					<a class="ext" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
+					<a class="ext" href="https://www.linkedin.com/in/zeping-zhang99/" target="_blank" rel="noopener">LinkedIn</a>
 					<a href="index.html">EN</a>
 					<a href="index-DE.html">DE</a>
 					<a href="#menu">菜单</a>
@@ -30,6 +33,7 @@
 					<li><a href="index-CN.html">首页</a></li>
 					<li><a href="landing.html">科研</a></li>
 					<li><a href="#pubs">论文</a></li>
+					<li><a href="https://github.com/YOUR_GITHUB">GitHub</a></li>
 					<li><a href="photography.html">摄影</a></li>
 					<li><a href="Symphony.html">交响乐</a></li>
 				</ul>
@@ -44,11 +48,11 @@
 						<h1>让机器看见下一步。</h1>
 					</header>
 					<div class="content">
-						<p>
-							AI 如果只看得见「现在」，自动驾驶就永远慢半拍。<br />
+						<p class="lead">
+							AI 如果只看得见「现在」，自动驾驶就永远慢半拍。
 							我做<strong>物理先验的世界模型</strong>——让车能预判前方，也让从卫星往下看的城市，能推演下一刻。
 						</p>
-						<p style="opacity:0.85; font-size:0.9em;">
+						<p class="meta">
 							渥太华大学 AI 博士生 · 加拿大国家研究委员会研究员<br />
 							世界模型 · 生成式 AI · 多模态大模型
 						</p>
@@ -67,42 +71,28 @@
 						<span class="image"><img src="images/dianyun.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="landing.html" class="link">科研</a></h3>
-							<p>世界模型、四维占据、激光雷达与国家级感知推演</p>
+							<p>世界模型、四维占据、激光雷达、国家级感知</p>
 						</header>
 					</article>
 					<article>
 						<span class="image"><img src="images/pic07.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="#pubs" class="link">论文</a></h3>
-							<p>NeurIPS · CVPR（在投）· IROS Oral · ICRA Oral / RA-L</p>
+							<p>NeurIPS · IROS Oral · ICRA Oral / RA-L</p>
 						</header>
 					</article>
 					<article>
 						<span class="image"><img src="images/bridge.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="photography.html" class="link">摄影</a></h3>
-							<p>光、路，和偶尔安静的一帧</p>
+							<p>光、路，安静的一帧</p>
 						</header>
 					</article>
 					<article>
 						<span class="image"><img src="images/banner2.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="Symphony.html" class="link">交响乐</a></h3>
-							<p>贝九依然能赢过很多争论</p>
-						</header>
-					</article>
-					<article>
-						<span class="image"><img src="images/education.jpg" alt="" /></span>
-						<header class="major">
-							<h3><a href="politics.html" class="link">教育公平</a></h3>
-							<p>胶东农村的长期小事</p>
-						</header>
-					</article>
-					<article>
-						<span class="image"><img src="images/longmao.jpg" alt="" /></span>
-						<header class="major">
-							<h3><a href="mailto:zeping.zhang@uottawa.ca" class="link">联系</a></h3>
-							<p>zeping.zhang@uottawa.ca · Ottawa, ON</p>
+							<p>贝九依然能赢</p>
 						</header>
 					</article>
 				</section>
@@ -112,11 +102,20 @@
 						<header class="major">
 							<h2>精选论文</h2>
 						</header>
-						<p><strong>FreeOcc</strong> — 解耦自车运动的高效四维占据预测（连续流匹配）。<em>NeurIPS 2026</em>。<a href="https://arxiv.org/abs/2611.08128">arXiv</a></p>
-						<p><strong>GATS</strong> — 几何感知的稀疏潜在世界模型 token 选择。<em>CVPR 2027，审稿中</em>。</p>
-						<p><strong>UFMF</strong> — 雷达运动先验驱动的实时四维占据预测（SSM 超快骨干，122 FPS）。<em>CVPR 2027，审稿中</em>。</p>
-						<p><strong>Physics-Aware LiDAR Densification</strong>。<em>IROS 2026 Oral</em>。</p>
-						<p><strong>Use Your Imagination</strong> — 与检测器解耦的激光雷达质量增强。<em>ICRA 2024 Oral &amp; IEEE RA-L</em>。</p>
+						<ul class="pub-list">
+							<li>
+								<strong>FreeOcc</strong> — 解耦自车运动的高效四维占据预测（连续流匹配）。
+								<span class="venue">NeurIPS 2026 · <a href="https://arxiv.org/abs/2611.08128">arXiv:2611.08128</a></span>
+							</li>
+							<li>
+								<strong>Physics-Aware Diffusion for LiDAR Point Cloud Densification</strong>
+								<span class="venue">IROS 2026 Oral</span>
+							</li>
+							<li>
+								<strong>Use Your Imagination</strong> — 与检测器解耦的激光雷达质量增强。
+								<span class="venue">ICRA 2024 Oral &amp; IEEE RA-L</span>
+							</li>
+						</ul>
 						<ul class="actions">
 							<li><a href="landing.html" class="button next">完整科研页</a></li>
 						</ul>
@@ -126,19 +125,19 @@
 				<section id="two">
 					<div class="inner">
 						<header class="major">
-							<h2>关于他</h2>
+							<h2>关于</h2>
 						</header>
 						<p>
-							<em>嗨。</em><br><br>
 							Zhang 是渥太华大学 AI 方向博士生（VIVA Lab），预计 2027 年 4 月前后毕业。
 							他做物理先验的世界模型：既服务自动驾驶，也追问——车端传感、卫星遥感和轨道交通，怎样一起帮一个国家推演城市如何流动。<br><br>
-							他是加拿大国家研究委员会（NRC）研究员。近期工作包括 FreeOcc（NeurIPS 2026）、两篇 CVPR 2027 投稿（GATS、UFMF）、IROS 2026 Oral（物理先验激光雷达稠密化），以及与 MDA Space 合作的加拿大月球车占用感知（Lunar-ODNet）。
+							他是加拿大国家研究委员会（NRC）研究员。已发表工作包括 FreeOcc（NeurIPS 2026）、IROS 2026 Oral（物理先验激光雷达稠密化），以及与 MDA Space 合作的加拿大月球车占用感知（Lunar-ODNet）。
 							更早：渥太华大学硕士（ICRA 2024 Oral &amp; RA-L）、Flipboard 北京数据科学家（LLM），以及与 NXP、LeddarTech、Sensor Cortek、Synopsys 的合作。本科毕业于南京大学。<br><br>
-							他也认真做生成式 AI 与多模态大模型——微调、RAG、用小模型压缩历史以改进检索，以及 LLM 辅助的研发工作流。世界模型读懂空间，大模型读懂其余；一个 AI 博士两边都该会。<br><br>
-							键盘之外：交响乐、越野、徒步、越野滑雪。加拿大持证飞行员。英语、胶东话、普通话；德语（基础）。
+							他也认真做生成式 AI 与多模态大模型——微调、RAG、LLM 辅助研发工作流。
+							键盘之外：交响乐、越野、徒步、越野滑雪。加拿大持证飞行员。
 						</p>
 						<ul class="actions">
-							<li><a href="mailto:zeping.zhang@uottawa.ca" class="button next">联系我</a></li>
+							<li><a href="mailto:zeping.zhang@uottawa.ca" class="button next">邮件</a></li>
+							<li><a href="https://github.com/YOUR_GITHUB" class="button next">GitHub</a></li>
 							<li><a href="https://www.linkedin.com/in/zeping-zhang99/" class="button next">LinkedIn</a></li>
 						</ul>
 					</div>
@@ -149,7 +148,7 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="copyright">
-						<li>ZHANG @ VIVA RESEARCH</li>
+						<li>ZHANG · AI RESEARCH</li>
 						<li>&copy; Design: <a href="https://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>

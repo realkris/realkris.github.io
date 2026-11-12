@@ -11,14 +11,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Ph.D. Candidate in AI at the University of Ottawa. Physics-informed world models, autonomous driving, generative AI." />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/site.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 
 			<header id="header" class="alt">
-				<a href="index.html" class="logo"><strong>ZHANG</strong> <span>VIVA Research</span></a>
+				<a href="index.html" class="logo"><strong>ZHANG</strong> <span>AI Research</span></a>
 				<nav>
+					<a class="ext" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
+					<a class="ext" href="https://www.linkedin.com/in/zeping-zhang99/" target="_blank" rel="noopener">LinkedIn</a>
 					<a href="index-DE.html">DE</a>
 					<a href="index-CN.html">中文</a>
 					<a href="#menu">Menu</a>
@@ -30,6 +33,7 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="landing.html">Research</a></li>
 					<li><a href="#pubs">Publications</a></li>
+					<li><a href="https://github.com/YOUR_GITHUB">GitHub</a></li>
 					<li><a href="photography.html">Photography</a></li>
 					<li><a href="Symphony.html">Symphony</a></li>
 				</ul>
@@ -44,11 +48,11 @@
 						<h1>Machines that see what comes next.</h1>
 					</header>
 					<div class="content">
-						<p>
-							Autonomy fails when AI only sees the present.<br />
+						<p class="lead">
+							Autonomy fails when AI only sees the present.
 							I build <strong>physics-informed world models</strong> so vehicles—and cities watched from space—can forecast the road ahead.
 						</p>
-						<p style="opacity:0.85; font-size:0.9em;">
+						<p class="meta">
 							Ph.D. Candidate in AI @ uOttawa · Researcher @ NRC<br />
 							World Models · Generative AI · Multimodal LLMs
 						</p>
@@ -67,42 +71,28 @@
 						<span class="image"><img src="images/dianyun.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="landing.html" class="link">Research</a></h3>
-							<p>Physics-informed world models, 4D occupancy, LiDAR, and national-scale sensing</p>
+							<p>World models, 4D occupancy, LiDAR, national-scale sensing</p>
 						</header>
 					</article>
 					<article>
 						<span class="image"><img src="images/pic07.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="#pubs" class="link">Publications</a></h3>
-							<p>NeurIPS · CVPR (under review) · IROS Oral · ICRA Oral / RA-L</p>
+							<p>NeurIPS · IROS Oral · ICRA Oral / RA-L</p>
 						</header>
 					</article>
 					<article>
 						<span class="image"><img src="images/bridge.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="photography.html" class="link">Photography</a></h3>
-							<p>Light, roads, and the odd quiet frame</p>
+							<p>Light, roads, quiet frames</p>
 						</header>
 					</article>
 					<article>
 						<span class="image"><img src="images/banner2.jpg" alt="" /></span>
 						<header class="major">
 							<h3><a href="Symphony.html" class="link">Symphony</a></h3>
-							<p>Beethoven still wins arguments</p>
-						</header>
-					</article>
-					<article>
-						<span class="image"><img src="images/education.jpg" alt="" /></span>
-						<header class="major">
-							<h3><a href="politics.html" class="link">Equal Education</a></h3>
-							<p>A long-running project in rural Jiaodong</p>
-						</header>
-					</article>
-					<article>
-						<span class="image"><img src="images/longmao.jpg" alt="" /></span>
-						<header class="major">
-							<h3><a href="mailto:zeping.zhang@uottawa.ca" class="link">Contact</a></h3>
-							<p>zeping.zhang@uottawa.ca · Ottawa, ON</p>
+							<p>Beethoven still wins</p>
 						</header>
 					</article>
 				</section>
@@ -112,11 +102,20 @@
 						<header class="major">
 							<h2>Selected Publications</h2>
 						</header>
-						<p><strong>FreeOcc</strong> — Decoupling Ego-Motion for Efficient 4D Occupancy Forecasting via Continuous Flow Matching. <em>NeurIPS 2026</em>. <a href="https://arxiv.org/abs/2611.08128">arXiv</a></p>
-						<p><strong>GATS</strong> — Geometry-Aware Token Selection for Efficient Sparse Latent World Models. <em>CVPR 2027, under review</em>.</p>
-						<p><strong>UFMF</strong> — Radar-Guided Kinematic Priors for Real-Time 4D Occupancy Forecasting (ultra-fast SSM core, 122 FPS). <em>CVPR 2027, under review</em>.</p>
-						<p><strong>Physics-Aware Diffusion for LiDAR Densification</strong>. <em>IROS 2026 Oral</em>.</p>
-						<p><strong>Use Your Imagination</strong> — A Detector-Independent LiDAR Quality Booster. <em>ICRA 2024 Oral &amp; IEEE RA-L</em>.</p>
+						<ul class="pub-list">
+							<li>
+								<strong>FreeOcc</strong> — Decoupling Ego-Motion for Efficient 4D Occupancy Forecasting via Continuous Flow Matching.
+								<span class="venue">NeurIPS 2026 · <a href="https://arxiv.org/abs/2611.08128">arXiv:2611.08128</a></span>
+							</li>
+							<li>
+								<strong>Physics-Aware Diffusion for LiDAR Point Cloud Densification</strong>
+								<span class="venue">IROS 2026 Oral</span>
+							</li>
+							<li>
+								<strong>Use Your Imagination</strong> — A Detector-Independent Approach for LiDAR Quality Booster.
+								<span class="venue">ICRA 2024 Oral &amp; IEEE Robotics and Automation Letters</span>
+							</li>
+						</ul>
 						<ul class="actions">
 							<li><a href="landing.html" class="button next">Full research page</a></li>
 						</ul>
@@ -126,20 +125,20 @@
 				<section id="two">
 					<div class="inner">
 						<header class="major">
-							<h2>About Zhang</h2>
+							<h2>About</h2>
 						</header>
 						<p>
-							<em>Hi.</em><br><br>
-							Zhang is a Ph.D. Candidate in AI at the University of Ottawa (VIVA Lab), expected to graduate around April 2027.
+							Zhang is a Ph.D. Candidate in AI at the University of Ottawa (VIVA Lab), expected around April 2027.
 							He builds physics-informed world models for autonomous driving—and for the harder question of how cars, satellites, and rail sensing can help a country forecast how cities move.<br><br>
-							He is a Researcher at the National Research Council Canada (NRC). Recent work includes FreeOcc (NeurIPS 2026), two CVPR 2027 submissions (GATS, UFMF), an IROS 2026 Oral on physics-aware LiDAR densification, and Lunar-ODNet with MDA Space for Canada’s moon rover.
+							He is a Researcher at the National Research Council Canada (NRC). Recent published work includes FreeOcc (NeurIPS 2026), an IROS 2026 Oral on physics-aware LiDAR densification, and Lunar-ODNet with MDA Space for Canada’s moon rover.
 							Earlier: M.A.Sc. at uOttawa (ICRA 2024 Oral &amp; RA-L), Data Scientist (LLM) at Flipboard in Beijing, and collaborations with NXP, LeddarTech, Sensor Cortek, and Synopsys.
 							B.Sc. from Nanjing University.<br><br>
-							He also works with generative AI and multimodal LLMs—fine-tuning, RAG, and LLM-assisted research workflows—because an AI Ph.D. should speak both languages: world models that understand space, and large models that understand everything else.<br><br>
-							Off the keyboard: orchestral music, off-roading, hiking, cross-country skiing. Canadian-certified pilot. English, Jiaodong Mandarin, Mandarin; German (basic).
+							He also works with generative AI and multimodal LLMs—fine-tuning, RAG, and LLM-assisted research workflows.
+							Off the keyboard: orchestral music, off-roading, hiking, cross-country skiing. Canadian-certified pilot.
 						</p>
 						<ul class="actions">
-							<li><a href="mailto:zeping.zhang@uottawa.ca" class="button next">Contact</a></li>
+							<li><a href="mailto:zeping.zhang@uottawa.ca" class="button next">Email</a></li>
+							<li><a href="https://github.com/YOUR_GITHUB" class="button next">GitHub</a></li>
 							<li><a href="https://www.linkedin.com/in/zeping-zhang99/" class="button next">LinkedIn</a></li>
 						</ul>
 					</div>
@@ -150,7 +149,7 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="copyright">
-						<li>ZHANG @ VIVA RESEARCH</li>
+						<li>ZHANG · AI RESEARCH</li>
 						<li>&copy; Design: <a href="https://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>

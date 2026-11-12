@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/site.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -18,6 +19,7 @@
 			<header id="header" class="alt style2">
 				<a href="index.html" class="logo"><strong>ZHANG</strong> <span>AI Research</span></a>
 				<nav>
+					<a class="ext" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
 					<a href="#menu">Menu</a>
 				</nav>
 			</header>
@@ -27,6 +29,7 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="landing.html">Research</a></li>
 					<li><a href="index.html#pubs">Publications</a></li>
+					<li><a href="https://github.com/YOUR_GITHUB">GitHub</a></li>
 					<li><a href="photography.html">Photography</a></li>
 					<li><a href="Symphony.html">Symphony</a></li>
 				</ul>
@@ -46,7 +49,7 @@
 					<div class="content">
 						<p>
 							Physics-informed world models for driving—and for cities seen from above.<br />
-							VIVA Lab · NRC · MDA Space
+							uOttawa VIVA Lab · NRC · MDA Space
 						</p>
 					</div>
 				</div>
@@ -61,13 +64,12 @@
 						</header>
 						<p>
 							I work on <strong>physics-informed world models</strong> and full-stack autonomous driving:
-							perception → forecasting → planning. Lately that means 4D occupancy forecasting,
-							geometry-aware sparse world models, radar-guided ultra-fast forecasters (SSM),
-							and LiDAR densification that respects sensor physics—so free space stays empty of ghost points.
+							perception → forecasting → planning. That means 4D occupancy forecasting,
+							LiDAR densification that respects sensor physics, and national-scale sensing questions
+							at NRC—how vehicles, satellites, and rail can jointly forecast how a city moves.
 						</p>
 						<p>
-							At NRC I also ask a national-scale question: how vehicle sensors, satellites, and rail sensing
-							can jointly forecast how a city moves. With MDA Space we built Lunar-ODNet for Canada’s moon rover—
+							With MDA Space we built Lunar-ODNet for Canada’s moon rover:
 							lightweight occupancy with high reliability on an internal benchmark.
 						</p>
 					</div>
@@ -83,16 +85,6 @@
 							<em>NeurIPS 2026</em>.
 							<a href="https://arxiv.org/abs/2611.08128">arXiv:2611.08128</a><br />
 							SOTA on nuScenes; zero-shot SemanticKITTI; robust under packet loss.
-						</p>
-						<p>
-							<strong>GATS</strong>: Geometry-Aware Token Selection for Efficient Sparse Latent World Models.
-							<em>CVPR 2027, under review</em>.<br />
-							Let LiDAR decide where to look before the vision backbone runs—up to 18× fewer FLOPs, stronger planning.
-						</p>
-						<p>
-							<strong>UFMF</strong>: Radar-Guided Kinematic Priors for Real-Time 4D Occupancy Forecasting.
-							<em>CVPR 2027, under review</em>.<br />
-							Diagonal SSM temporal core + radar velocity priors. Ultra-fast: 122 FPS on one RTX 4090.
 						</p>
 						<p>
 							<strong>Physics-Aware Diffusion for LiDAR Point Cloud Densification</strong>.
@@ -115,7 +107,7 @@
 						<p><strong>AWS Activate</strong> (2026) — large-scale training credits.</p>
 						<p><strong>Federal AI &amp; IoV Grant</strong>, Algoma University (2025) — LLM-driven telemetry for connected vehicles.</p>
 						<p><strong>MDA Space</strong> (2023) — occupancy for Canada’s lunar rover (Lunar-ODNet).</p>
-						<p><strong>LeddarTech</strong> (2024) · <strong>Sensor Cortek</strong> (2023, adverse weather fusion) · <strong>Synopsys</strong> (2022, UYI) · <strong>NXP</strong> (intersection perception).</p>
+						<p><strong>LeddarTech</strong> (2024) · <strong>Sensor Cortek</strong> (2023) · <strong>Synopsys</strong> (2022) · <strong>NXP</strong>.</p>
 					</div>
 				</section>
 
@@ -125,11 +117,12 @@
 							<h2>Also: Generative AI</h2>
 						</header>
 						<p>
-							Beyond driving, I work with LLMs—fine-tuning, serving, RAG, and using small models to compress history for better retrieval.
-							LLM-assisted research workflows have been part of how I build since 2021. World models read space; large models read the rest.
+							Beyond driving, I work with LLMs—fine-tuning, serving, RAG, and LLM-assisted research workflows since 2021.
+							World models read space; large models read the rest.
 						</p>
 						<ul class="actions">
 							<li><a href="index.html" class="button next">Back home</a></li>
+							<li><a href="https://github.com/YOUR_GITHUB" class="button next">GitHub</a></li>
 							<li><a href="mailto:zeping.zhang@uottawa.ca" class="button next">Contact</a></li>
 						</ul>
 					</div>
@@ -140,7 +133,7 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="copyright">
-						<li>ZHANG @ VIVA RESEARCH</li>
+						<li>ZHANG · AI RESEARCH</li>
 						<li>&copy; Design: <a href="https://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>

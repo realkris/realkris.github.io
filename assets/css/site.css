@@ -1,0 +1,161 @@
+/* Site overrides — clean academic hero + mobile */
+
+#header .logo span {
+	letter-spacing: 0.12em;
+}
+
+#header nav a.ext {
+	margin-left: 0.85em;
+	opacity: 0.9;
+	text-decoration: none;
+	border: 0;
+}
+
+#header nav a.ext:hover {
+	opacity: 1;
+}
+
+/* Hero: stack everything; kill Forty’s side-by-side content/actions */
+#banner.major .inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	min-height: 78vh;
+	padding: 7em 0 4em;
+	max-width: 42rem;
+}
+
+#banner.major .inner header.major {
+	margin: 0 0 1.25em 0;
+	width: 100%;
+}
+
+#banner.major .inner header.major h1 {
+	font-size: clamp(1.85rem, 5.2vw, 3rem);
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	text-transform: none;
+	font-weight: 600;
+	max-width: 18ch;
+}
+
+#banner.major .inner header.major:after {
+	max-width: 6rem;
+	margin: 1.1em 0 0;
+}
+
+#banner.major .content {
+	display: block !important;
+	width: 100% !important;
+	max-width: 36rem;
+}
+
+#banner.major .content > * {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+#banner.major .content p.lead {
+	font-size: 1.05rem;
+	line-height: 1.55;
+	letter-spacing: 0.01em;
+	text-transform: none;
+	opacity: 0.95;
+	margin: 0 0 1rem 0;
+}
+
+#banner.major .content p.meta {
+	font-size: 0.8rem;
+	line-height: 1.55;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	opacity: 0.78;
+	margin: 0 0 1.75rem 0;
+}
+
+#banner.major .content .actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 0;
+	justify-content: flex-start !important;
+}
+
+#banner.major .content .actions li {
+	padding: 0;
+	margin: 0;
+}
+
+#banner.major .content .actions .button {
+	min-width: auto;
+}
+
+/* Publications list */
+#pubs .pub-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5em 0;
+}
+
+#pubs .pub-list li {
+	padding: 1em 0;
+	border-top: solid 1px rgba(255, 255, 255, 0.15);
+	line-height: 1.55;
+}
+
+#pubs .pub-list li:last-child {
+	border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+#pubs .pub-list .venue {
+	display: block;
+	margin-top: 0.35em;
+	font-size: 0.9em;
+	opacity: 0.75;
+}
+
+/* Tiles: readable on narrow screens */
+@media screen and (max-width: 736px) {
+	#banner.major .inner {
+		min-height: 72vh;
+		padding: 6.5em 0 3em;
+	}
+
+	#banner.major .inner header.major h1 {
+		max-width: none;
+	}
+
+	#banner.major .content .actions {
+		width: 100%;
+	}
+
+	#banner.major .content .actions .button {
+		width: 100%;
+		text-align: center;
+	}
+
+	.tiles article {
+		width: 100% !important;
+		min-height: 14em;
+	}
+
+	#header nav a:not([href="#menu"]) {
+		display: none;
+	}
+
+	#header .mobile-links {
+		display: inline;
+	}
+}
+
+@media screen and (min-width: 737px) {
+	#header .mobile-links {
+		display: none;
+	}
+}
+
+/* Soften huge uppercase on about */
+#two .inner p {
+	line-height: 1.7;
+	letter-spacing: 0.01em;
+}
