@@ -98,10 +98,11 @@
 			}, 100);
 		});
 
-	// Clear transitioning state on unload/hide.
-		$window.on('unload pagehide', function() {
+	// Clear transitioning state on unload/hide/back-forward cache.
+		$window.on('unload pagehide pageshow', function() {
 			window.setTimeout(function() {
 				$('.is-transitioning').removeClass('is-transitioning');
+				$wrapper.removeClass('is-transitioning');
 			}, 250);
 		});
 
@@ -161,22 +162,37 @@
 
 								// Open in new tab.
 									window.open(href);
+									return;
 
 							}
 
-						// Otherwise ...
-							else {
+						// Same-page anchors (e.g. #pubs): scroll only.
+						// Do NOT fade the wrapper — hash nav never unloads the page,
+						// so is-transitioning would leave a blank screen.
+							if (href && href.charAt(0) === '#') {
 
-								// Start transitioning.
-									$this.addClass('is-transitioning');
-									$wrapper.addClass('is-transitioning');
+								var $target = $(href);
 
-								// Redirect.
-									window.setTimeout(function() {
-										location.href = href;
-									}, 500);
+								if ($target.length > 0)
+									$('html, body')
+										.stop(true)
+										.animate({
+											scrollTop: $target.offset().top - ($header.height() - 2)
+										}, 500);
+								else
+									location.hash = href;
+
+								return;
 
 							}
+
+						// Cross-page: fade, then navigate.
+							$this.addClass('is-transitioning');
+							$wrapper.addClass('is-transitioning');
+
+							window.setTimeout(function() {
+								location.href = href;
+							}, 500);
 
 					});
 
