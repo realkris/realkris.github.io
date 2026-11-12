@@ -1,5 +1,21 @@
 /* Site overrides — keep Forty’s centered shell; stack hero; mobile tiles */
 
+@font-face {
+	font-family: "Caveat";
+	src: url("../fonts/Caveat-Variable.ttf") format("truetype");
+	font-weight: 400 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Zhi Mang Xing";
+	src: url("../fonts/ZhiMangXing-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 #header .logo span {
 	letter-spacing: 0.12em;
 }
@@ -85,38 +101,45 @@
 	margin-left: 0.06em;
 }
 
+/* Line ABOVE the signature — never through the letters */
 #banner.major .hero-byline {
-	position: relative;
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-end;
 	max-width: min(100%, 28rem);
 	margin: 1.35em 0 0;
-	min-height: 1.6em;
+	gap: 1.35em;
 }
 
-#banner.major .hero-byline::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 50%;
+#banner.major .hero-byline .hero-rule {
+	display: block;
+	width: 100%;
 	height: 1.5px;
-	background: rgba(255, 255, 255, 0.88);
+	background: rgba(255, 255, 255, 0.9);
+	flex-shrink: 0;
+}
+
+#banner.major header.major > p.hero-byline,
+#banner.major .hero-byline {
+	text-transform: none !important;
+	letter-spacing: normal !important;
+	font-weight: 400 !important;
+	opacity: 1 !important;
 }
 
 #banner.major .hero-byline .name {
-	position: relative;
-	z-index: 1;
-	font-family: "Caveat", "Zhi Mang Xing", "KaiTi", "STKaiti", cursive;
-	font-size: clamp(1.65rem, 3.2vw, 2.15rem);
-	font-weight: 500;
-	letter-spacing: 0.04em;
-	line-height: 1;
-	color: #fff;
-	padding: 0 0.25em;
+	display: inline-block;
+	font-family: "Caveat", "Zhi Mang Xing", "KaiTi", "STKaiti", cursive !important;
+	font-size: clamp(1.75rem, 3.4vw, 2.25rem) !important;
+	font-weight: 600 !important;
+	font-style: normal !important;
+	letter-spacing: 0.03em !important;
+	line-height: 1.1 !important;
+	color: #fff !important;
+	padding: 0 0.15em;
 	white-space: nowrap;
 	text-transform: none !important;
+	align-self: flex-end;
 }
 
 /* Long Chinese blurbs on tiles */
@@ -281,9 +304,25 @@
 	#banner.major > .inner {
 		padding-top: 6em !important;
 		padding-bottom: 2.75em !important;
+		width: calc(100% - 2.5em) !important;
 	}
 
-	#banner.major .inner header.major h1 {
+	#banner.major .inner header.major h1,
+	#banner.major .quote-hero h1 {
+		max-width: none;
+		font-size: clamp(1.55rem, 7vw, 2.1rem);
+	}
+
+	#banner.major .hero-byline {
+		max-width: 100%;
+		gap: 1.1em;
+	}
+
+	#banner.major .hero-byline .name {
+		font-size: clamp(1.45rem, 6vw, 1.85rem) !important;
+	}
+
+	#banner.major .content {
 		max-width: none;
 	}
 
@@ -304,10 +343,14 @@
 
 	.tiles article {
 		width: 100% !important;
-		height: 14em;
-		min-height: 14em;
+		height: auto;
+		min-height: 12.5em;
 		max-height: none;
-		padding: 2.5em 1.75em 1.5em 1.75em;
+		padding: 2.25em 1.5em 1.75em 1.5em;
+	}
+
+	.tiles article p {
+		font-size: 0.85em;
 	}
 
 	#header nav a:not([href="#menu"]) {
