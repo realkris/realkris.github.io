@@ -101,22 +101,51 @@
 	margin-left: 0.06em;
 }
 
-/* Line ABOVE the signature — never through the letters */
+/*
+ * Signature ABOVE the rule — always.
+ * Order in HTML: .name then .hero-rule
+ */
 #banner.major .hero-byline {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	max-width: min(100%, 28rem);
-	margin: 1.35em 0 0;
-	gap: 1.35em;
+	margin: 1.1em 0 0;
+	gap: 0;
+}
+
+#banner.major .hero-byline .name {
+	display: block;
+	order: 1;
+	font-family: "Caveat", "Zhi Mang Xing", "KaiTi", "STKaiti", cursive !important;
+	font-size: clamp(1.75rem, 3.4vw, 2.25rem) !important;
+	font-weight: 600 !important;
+	font-style: normal !important;
+	letter-spacing: 0.03em !important;
+	/* Tall line-box so Caveat ink (g/p/y) stays inside the span box */
+	line-height: 1.85 !important;
+	color: #fff !important;
+	padding: 0 0.15em 0.45rem !important;
+	margin: 0 0 1.15rem 0 !important;
+	white-space: nowrap;
+	text-transform: none !important;
+	align-self: flex-end;
+	position: relative;
+	z-index: 2;
+	overflow: visible;
 }
 
 #banner.major .hero-byline .hero-rule {
 	display: block;
+	order: 2;
 	width: 100%;
 	height: 1.5px;
+	/* rem — not em — empty span inherits tiny header.major > p font-size */
+	margin: 0.85rem 0 0 0 !important;
 	background: rgba(255, 255, 255, 0.9);
 	flex-shrink: 0;
+	position: relative;
+	z-index: 1;
 }
 
 #banner.major header.major > p.hero-byline,
@@ -127,19 +156,16 @@
 	opacity: 1 !important;
 }
 
-#banner.major .hero-byline .name {
-	display: inline-block;
-	font-family: "Caveat", "Zhi Mang Xing", "KaiTi", "STKaiti", cursive !important;
-	font-size: clamp(1.75rem, 3.4vw, 2.25rem) !important;
-	font-weight: 600 !important;
-	font-style: normal !important;
-	letter-spacing: 0.03em !important;
-	line-height: 1.1 !important;
-	color: #fff !important;
-	padding: 0 0.15em;
-	white-space: nowrap;
-	text-transform: none !important;
-	align-self: flex-end;
+/* Tile title underlines: clear descenders (p/g/y) — rem beats tiny em contexts */
+.tiles article header.major > :first-child:after {
+	margin-top: 1.1rem !important;
+}
+
+/* Section headers too (Selected Publications, About, …) */
+#main > section > .inner > header.major > :first-child:after,
+#pubs header.major > :first-child:after,
+#two header.major > :first-child:after {
+	margin-top: 1rem !important;
 }
 
 /* Long Chinese blurbs on tiles */
@@ -183,37 +209,42 @@
 	margin: 0 0 2rem 0 !important;
 }
 
-#banner.major .content .actions {
+/* Prevent sideways scroll from wide button rows */
+html, body {
+	overflow-x: hidden;
+}
+
+#wrapper {
+	overflow-x: hidden;
+}
+
+#two .actions,
+#pubs .actions {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.85rem;
-	margin: 0 !important;
-	justify-content: flex-start !important;
-	padding: 0;
+	gap: 0.75rem;
 }
 
-#banner.major .content .actions li {
+#two .actions li,
+#pubs .actions li {
 	padding: 0;
 	margin: 0;
-	display: block;
-}
-
-#banner.major .content .actions .button {
-	min-width: auto;
 }
 
 /*
- * Forty’s long/short tiles: 40% / 60% / 60% / 40%.
- * main.css collapses to 50/50 below 980px — keep the stagger until phones.
+ * Below tablet: stack equal-height tiles so staggered 40/60 never leaves holes.
  */
 @media screen and (max-width: 980px) {
-	.tiles article {
-		width: 40% !important;
+	.tiles {
+		display: flex !important;
+		flex-direction: column;
 	}
 
-	.tiles article:nth-child(4n - 1),
-	.tiles article:nth-child(4n - 2) {
-		width: 60% !important;
+	.tiles article {
+		width: 100% !important;
+		height: 14em !important;
+		min-height: 14em !important;
+		max-height: 14em !important;
 	}
 }
 
@@ -315,42 +346,62 @@
 
 	#banner.major .hero-byline {
 		max-width: 100%;
-		gap: 1.1em;
 	}
 
 	#banner.major .hero-byline .name {
 		font-size: clamp(1.45rem, 6vw, 1.85rem) !important;
+		margin-bottom: 1.05rem !important;
+		line-height: 1.9 !important;
+	}
+
+	#banner.major .hero-byline .hero-rule {
+		margin-top: 0.75rem !important;
 	}
 
 	#banner.major .content {
 		max-width: none;
 	}
 
-	#banner.major .content .actions {
-		width: 100%;
-		flex-direction: column;
-	}
-
-	#banner.major .content .actions .button {
-		width: 100%;
-		text-align: center;
-	}
-
-	/* stack tiles full-width on phones only */
-	.tiles {
-		display: block;
-	}
-
 	.tiles article {
-		width: 100% !important;
-		height: auto;
-		min-height: 12.5em;
-		max-height: none;
-		padding: 2.25em 1.5em 1.75em 1.5em;
+		padding: 2.25em 1.5em 1.5em 1.5em;
 	}
 
 	.tiles article p {
-		font-size: 0.85em;
+		font-size: 0.82em;
+	}
+
+	/* About / pubs buttons: stack so they don't blow out page width */
+	#two .actions,
+	#pubs .actions,
+	#one .actions {
+		display: flex !important;
+		flex-direction: column !important;
+		flex-wrap: nowrap !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		gap: 0.65rem;
+	}
+
+	#two .actions li,
+	#pubs .actions li,
+	#one .actions li {
+		display: block !important;
+		width: 100% !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	#two .actions .button,
+	#pubs .actions .button,
+	#one .actions .button {
+		display: block !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+		text-align: center;
+		min-width: 0 !important;
+		padding-left: 1.25em !important;
+		padding-right: 4.25em !important;
 	}
 
 	#header nav a:not([href="#menu"]) {
