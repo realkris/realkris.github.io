@@ -1,4 +1,4 @@
-/* Site overrides — academic hero + tiles + pubs */
+/* Site overrides — keep Forty’s centered shell; stack hero; mobile tiles */
 
 #header .logo span {
 	letter-spacing: 0.12em;
@@ -15,25 +15,28 @@
 	opacity: 1;
 }
 
-/* Hero: stacked left column (not side-by-side buttons) */
+/*
+ * Hero: keep template .inner (margin: 0 auto, side padding).
+ * Only kill the side-by-side content/actions row.
+ */
 #banner.major {
 	height: auto !important;
-	min-height: 85vh !important;
+	min-height: 78vh !important;
 	max-height: none !important;
 	align-items: flex-end !important;
-	justify-content: flex-start !important;
 }
 
 #banner.major > .inner {
 	display: flex !important;
 	flex-direction: column;
 	justify-content: flex-end;
-	width: 100%;
-	max-width: 42rem;
-	margin: 0 !important;
-	margin-left: 0 !important;
+	padding-top: 7em !important;
+	padding-bottom: 3.5em !important;
+	/* main.css zeroes banner padding; keep side inset via width */
+	width: calc(100% - 8em) !important;
+	max-width: 65em;
+	margin-left: auto !important;
 	margin-right: auto !important;
-	padding: 7.5em 0 4em !important;
 	text-align: left;
 }
 
@@ -48,7 +51,7 @@
 	letter-spacing: -0.02em;
 	text-transform: none;
 	font-weight: 600;
-	max-width: 16ch;
+	max-width: 22ch;
 }
 
 #banner.major .inner header.major:after {
@@ -59,7 +62,7 @@
 #banner.major .content {
 	display: block !important;
 	width: 100% !important;
-	max-width: 36rem;
+	max-width: 46rem;
 	margin: 0 !important;
 	align-items: flex-start !important;
 }
@@ -109,24 +112,18 @@
 	min-width: auto;
 }
 
-/* Keep Four-grid tiles; stack cleanly on phones */
+/*
+ * Forty’s long/short tiles: 40% / 60% / 60% / 40%.
+ * main.css collapses to 50/50 below 980px — keep the stagger until phones.
+ */
 @media screen and (max-width: 980px) {
 	.tiles article {
-		width: 50% !important;
-	}
-}
-
-@media screen and (max-width: 736px) {
-	.tiles {
-		display: block;
+		width: 40% !important;
 	}
 
-	.tiles article {
-		width: 100% !important;
-		height: 14em;
-		min-height: 14em;
-		max-height: none;
-		padding: 2.5em 1.75em 1.5em 1.75em;
+	.tiles article:nth-child(4n - 1),
+	.tiles article:nth-child(4n - 2) {
+		width: 60% !important;
 	}
 }
 
@@ -176,11 +173,14 @@
 	font-weight: 700;
 }
 
-/* About */
 #two .inner p {
 	line-height: 1.75;
 	letter-spacing: 0.01em;
 	max-width: 42rem;
+}
+
+#footer .icons {
+	margin-bottom: 1em;
 }
 
 #footer .copyright {
@@ -193,8 +193,8 @@
 	}
 
 	#banner.major > .inner {
-		padding: 6.5em 0 3em !important;
-		max-width: none;
+		padding-top: 6em !important;
+		padding-bottom: 2.75em !important;
 	}
 
 	#banner.major .inner header.major h1 {
@@ -209,6 +209,19 @@
 	#banner.major .content .actions .button {
 		width: 100%;
 		text-align: center;
+	}
+
+	/* stack tiles full-width on phones only */
+	.tiles {
+		display: block;
+	}
+
+	.tiles article {
+		width: 100% !important;
+		height: 14em;
+		min-height: 14em;
+		max-height: none;
+		padding: 2.5em 1.75em 1.5em 1.75em;
 	}
 
 	#header nav a:not([href="#menu"]) {
